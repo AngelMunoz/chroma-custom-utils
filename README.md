@@ -1,8 +1,7 @@
-# Unofficial port of the Razer Chroma Rest SDK
+# Custom utils for the Razer Chroma Rest SDK
 
 Hello Everyone, this is part of a port of the razer chroma rest sdk, while
-razer offers the official javascript implementation of the SDK, it is implemented
-in ES5 and it is quite of an All in one solution, you could easily use it there's nothing wrong on that. However I wanted to practice a little bit and also have some typescript support as well.
+razer offers the official javascript implementation of the SDK, it is quite of an All in one solution, you could easily use it there's nothing wrong on that. However I wanted to practice a little bit and also have some typescript support as well.
 
 
 # Usage
