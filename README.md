@@ -6,7 +6,8 @@ in ES5 and it is quite of an All in one solution, you could easily use it there'
 
 
 # Dist
-This package produces UMD compiled javascript files, it is not a bundle, and it is not meant to be consumed directly
+This package produces UMD compiled javascript files, it is not a bundle, and it is not meant to be consumed directly,
+you should be using this with a bundler, say for example webpack
 
 # Build
 ```
