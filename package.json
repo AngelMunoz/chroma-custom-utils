@@ -1,0 +1,27 @@
+{
+  "name": "chroma-custom-utils",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node fuse.js test",
+    "build": "npm test && node fuse.js",
+    "test:watch": "nodemon"
+  },
+  "keywords": [
+    "chroma",
+    "sdk",
+    "razer",
+    "unofficial"
+  ],
+  "author": "Angel D. Munoz <scythes.lol@gmail.com>",
+  "dependencies": {
+    "axios": "0.18.0"
+  },
+  "devDependencies": {
+    "fuse-box": "3.3.0",
+    "fuse-test-runner": "1.0.16",
+    "nodemon": "1.17.5",
+    "typescript": "2.9.2"
+  }
+}

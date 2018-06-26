@@ -1,0 +1,7 @@
+{
+  "verbose": false,
+  "ignore": ["dist", "node_modules", ".fusebox", ".git"],
+  "watch": ["src/**"],
+  "ext": "ts",
+  "exec": "node --inspect fuse.js test"
+}
