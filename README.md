@@ -5,6 +5,55 @@ razer offers the official javascript implementation of the SDK, it is implemente
 in ES5 and it is quite of an All in one solution, you could easily use it there's nothing wrong on that. However I wanted to practice a little bit and also have some typescript support as well.
 
 
+# Usage
+Please refer to the `src/tests` directory to see how it is used, but for short
+```ts
+                      // true is for development
+const keyboard = new KeyboardHelper(true, {
+      author: {
+        name: "Chroma Tester",
+        contact: "Tester"
+      },
+      title: "Chroma SDK Test Runner",
+      device_supported: ["keyboard"],
+      category: "application",
+      description: "Test App"
+    });
+
+async function main() {
+  // either init at the beggining of the app or inside the function
+  // just take in mind that this calls the chroma api each 5s
+  await keyboard.init(); 
+  let id;
+  const autoapply = false; // or true depending on you
+  
+  if(autoapply) {
+    id = await keyboardInstance
+        // auto apply effect
+        .stopAnimation(true);
+    // do more stuff...
+  } else {
+    id = await keyboardInstance.stopAnimation();
+    // do more stuff...
+  
+    // apply the effect
+    await keyboard.applyEffect(id);
+    
+  }
+  
+  // do more stuff...
+  
+  // you need to delete the effects to release resources
+  await keyboard.deleteEffect(id); 
+  
+  // remove the connection with the server and remove polling to the endpoint
+  keyboard.unload();
+}
+
+main();
+```
+
+
 # Dist
 This package produces UMD compiled javascript files, it is not a bundle, and it is not meant to be consumed directly,
 you should be using this with a bundler, say for example webpack
