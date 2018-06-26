@@ -21,8 +21,8 @@ task("clean", async () => {
 
 task("default", ["clean"], async context => {
   tsc('src', {
-    target: "es5",
-    module: "umd",
+    target: "es2015",
+    module: "es2015",
     charset: "utf8",
     declaration: true,
     inlineSourceMap: true,

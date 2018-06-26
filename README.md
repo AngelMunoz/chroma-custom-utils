@@ -1,4 +1,5 @@
-# Unofficial port of the Razer Chroma Rest SDK
+# In Development
+# A sloppy implementation of the Razer Chroma Rest SDK
 
 Hello Everyone, this is part of a port of the razer chroma rest sdk, while
 razer offers the official javascript implementation of the SDK, it is implemented
@@ -53,11 +54,9 @@ async function main() {
 main();
 ```
 
-
-# Dist
-This package produces UMD compiled javascript files, it is not a bundle, and it is not meant to be consumed directly,
-you should be using this with a bundler, say for example webpack
-
+### Dist
+While there is a npm package of this, you shouldn't use it just yet,
+I still want to figure out some stuff and things may break at any time
 # Build
 ```
 npm install
