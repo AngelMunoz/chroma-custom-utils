@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "umd",
+    "target": "es2015",
+    "module": "es2015",
     "charset": "utf8",
     "moduleResolution": "node",
     "lib": [
