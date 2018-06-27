@@ -1,15 +1,20 @@
 import { should } from "fuse-test-runner";
 import { ChromaSdk } from "../lib/chroma-sdk";
 
+class MockChroma extends ChromaSdk {
+  constructor(isDev, options) {
+    super(isDev, options);
+  }
+}
 export class ChromaSdkTest {
-  chromaInstance: ChromaSdk = null;
+  chromaInstance: MockChroma = null;
   beforeEach() {
     /**
      * Typescript complains about this, but the test runner 
      * will actually create an instance (there are no abstract classes
      * in javascript runtime) so you can ignore the compiler here
      */
-    this.chromaInstance = new ChromaSdk(true, {
+    this.chromaInstance = new MockChroma(true, {
       author: {
         name: "Chroma Tester",
         contact: "Tester"
@@ -33,7 +38,7 @@ export class ChromaSdkTest {
     this.chromaInstance.init()
     should(this.chromaInstance.ready)
       .beTrue();
-      
+
     this.chromaInstance.unload();
     should(this.chromaInstance.ready)
       .beFalse();
@@ -41,7 +46,7 @@ export class ChromaSdkTest {
   }
 
   afterEach() {
-    this.chromaInstance.unload();
+    return this.chromaInstance.unload();
   }
 
 }

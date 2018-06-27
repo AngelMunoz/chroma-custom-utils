@@ -148,7 +148,7 @@ export class KeyboardHelperTest {
   afterEach() {
     this.keyboardInstance.deleteEffect(this.currentAnimations);
     this.currentAnimations = [];
-    this.keyboardInstance.unload();
+    return this.keyboardInstance.unload();
   }
 
 }

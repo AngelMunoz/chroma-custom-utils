@@ -50,6 +50,7 @@ export abstract class ChromaSdk {
     this.sessionid = null;
     this.timerid = null;
     this._ready = false;
+    return this.$http.delete('');
   }
 
   public async applyEffect(id: string | string[]): Promise<{ result: number; } | { results: { result: number; }[] }> {
